@@ -1,4 +1,4 @@
-package org.launchcode.codingevents.models;
+package org.launchcode.codingevents.models.s4;
 
 /**
  * Created by Chris Bay

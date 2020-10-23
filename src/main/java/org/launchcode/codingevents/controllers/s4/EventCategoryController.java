@@ -1,7 +1,7 @@
-package org.launchcode.codingevents.controllers;
+package org.launchcode.codingevents.controllers.s4;
 
-import org.launchcode.codingevents.data.EventCategoryRepository;
-import org.launchcode.codingevents.models.EventCategory;
+import org.launchcode.codingevents.data.s4.EventCategoryRepository;
+import org.launchcode.codingevents.models.s4.EventCategory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,7 +17,7 @@ import javax.validation.Valid;
  * Created by Chris Bay
  */
 @Controller
-@RequestMapping("eventCategories")
+@RequestMapping("s4/eventCategories")
 public class EventCategoryController {
 
     @Autowired
@@ -27,14 +27,14 @@ public class EventCategoryController {
     public String displayAllCategories(Model model) {
         model.addAttribute("title", "All Categories");
         model.addAttribute("categories", eventCategoryRepository.findAll());
-        return "eventCategories/index";
+        return "s4/eventCategories/index";
     }
 
     @GetMapping("create")
     public String renderCreateEventCategoryForm(Model model) {
         model.addAttribute("title", "Create Category");
         model.addAttribute(new EventCategory());
-        return "eventCategories/create";
+        return "s4/eventCategories/create";
     }
 
     @PostMapping("create")
@@ -44,7 +44,7 @@ public class EventCategoryController {
         if (errors.hasErrors()) {
             model.addAttribute("title", "Create Category");
             model.addAttribute(new EventCategory());
-            return "eventCategories/create";
+            return "s4/eventCategories/create";
         }
 
         eventCategoryRepository.save(eventCategory);

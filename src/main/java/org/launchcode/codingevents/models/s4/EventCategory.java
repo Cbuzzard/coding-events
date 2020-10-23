@@ -1,10 +1,7 @@
-package org.launchcode.codingevents.models;
+package org.launchcode.codingevents.models.s4;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.validation.constraints.Size;
-import java.util.Objects;
 
 /**
  * Created by Chris Bay

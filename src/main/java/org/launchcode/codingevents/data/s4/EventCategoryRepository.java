@@ -1,6 +1,6 @@
-package org.launchcode.codingevents.data;
+package org.launchcode.codingevents.data.s4;
 
-import org.launchcode.codingevents.models.EventCategory;
+import org.launchcode.codingevents.models.s4.EventCategory;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
